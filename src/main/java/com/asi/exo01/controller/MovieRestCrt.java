@@ -35,6 +35,4 @@ public class MovieRestCrt {
 	public Movie addMovie(@RequestBody Movie m){
 		return mService.addMovie(m);
 	}
-	
-
 }
