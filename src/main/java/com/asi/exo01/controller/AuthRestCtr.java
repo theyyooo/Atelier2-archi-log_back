@@ -19,7 +19,7 @@ public class AuthRestCtr {
 	public String register(@RequestBody User u) {
 		
 		if (u.getNom() != null && u.getPwd() != null && u.getSurName() != null) {
-			return "félicitations " + authService.register(u).getNom() + ", votre compte a été crée.";
+			return authService.register(u);
 		}
 		return "Merci de compléter le formulaire entièrement.";
 	}

@@ -15,11 +15,21 @@ public class AuthService {
 		this.uRepository = uRepository;
 	}
 	
-	public User register(User u) {
-		return uRepository.save(u);
+	public String register(User u) {
+		if (uRepository.findBySurName(u.getSurName()) == null){
+			uRepository.save(u);
+			return "félicitation " + u.getNom() + ", votre compte a été crée";
+		}
+		return "Vous avez déja un compte";
+		
 	}
 	
 	public Integer login(User u) {
-		return u.getId();
+		User user = uRepository.findBySurName(u.getSurName());
+		if (user != null && user.getPwd().equals(u.getPwd())) {
+			return user.getId();
+		}
+		return -1;
+		
 	}
 }
