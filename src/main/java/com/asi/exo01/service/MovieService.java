@@ -1,4 +1,4 @@
-package com.asi.exo01.controller;
+package com.asi.exo01.service;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -8,6 +8,7 @@ import java.util.Optional;
 import org.springframework.stereotype.Service;
 
 import com.asi.exo01.model.Movie;
+import com.asi.exo01.repository.MovieRepository;
 
 @Service
 public class MovieService {

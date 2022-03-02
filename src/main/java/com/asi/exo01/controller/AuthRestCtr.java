@@ -4,6 +4,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import com.asi.exo01.model.User;
+import com.asi.exo01.service.AuthService;
 
 @RestController
 public class AuthRestCtr {
@@ -24,10 +25,10 @@ public class AuthRestCtr {
 	}
 	
 	@PostMapping("/login")
-	public String login(@RequestBody User u) {
+	public Integer login(@RequestBody User u) {
 		if (u.getSurName() != null && u.getPwd() != null) {
 			return authService.login(u);
 		}
-		return "Merci de compléter le formulaire entièrement.";
+		return -1;
 	}
 }

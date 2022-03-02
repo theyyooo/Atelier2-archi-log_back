@@ -1,4 +1,4 @@
-package com.asi.exo01.controller;
+package com.asi.exo01.repository;
 
 import org.springframework.data.repository.CrudRepository;
 

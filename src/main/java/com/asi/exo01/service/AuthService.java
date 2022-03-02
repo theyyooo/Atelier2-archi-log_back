@@ -1,8 +1,9 @@
-package com.asi.exo01.controller;
+package com.asi.exo01.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.asi.exo01.model.User;
+import com.asi.exo01.repository.UserRepository;
 
 @Service
 public class AuthService {
@@ -18,7 +19,7 @@ public class AuthService {
 		return uRepository.save(u);
 	}
 	
-	public String login(User u) {
-		return "ok";
+	public Integer login(User u) {
+		return u.getId();
 	}
 }

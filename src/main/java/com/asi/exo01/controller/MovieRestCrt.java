@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.asi.exo01.model.Movie;
+import com.asi.exo01.service.MovieService;
 
 @RestController
 public class MovieRestCrt {
