@@ -2,7 +2,6 @@ package com.asi.exo01.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
@@ -13,16 +12,15 @@ public class User {
 	private Integer id;
 	private String surName;
 	private String pwd;
-	private String nom;
-	private float solde;
+	private String name;
+	private float balance;
 	
-	public User(Integer id, String surName, String pwd, String nom, float solde) {
+	public User(String surName, String pwd, String nom, float solde) {
 		super();
-		this.id = id;
 		this.surName = surName;
 		this.pwd = pwd;
-		this.nom = nom;
-		this.solde = solde;
+		this.name = nom;
+		this.balance = solde;
 	}
 	
 	public User() {
@@ -37,8 +35,8 @@ public class User {
 		this.surName = surName;
 	}
 
-	public int getId() {
-		return id;
+	public Integer getId() {
+		return this.id;
 	}
 
 	public void setId(int id) {
@@ -46,11 +44,11 @@ public class User {
 	}
 
 	public float getSolde() {
-		return solde;
+		return balance;
 	}
 
 	public void setSolde(float solde) {
-		this.solde = solde;
+		this.balance = solde;
 	}
 
 	public String getPwd() {
@@ -62,10 +60,10 @@ public class User {
 	}
 
 	public String getNom() {
-		return nom;
+		return name;
 	}
 
 	public void setNom(String nom) {
-		this.nom = nom;
+		this.name = nom;
 	}
 }

@@ -10,5 +10,6 @@ public interface CardRepository extends CrudRepository<Card, Integer> {
 	
 	public Card save(Card c); 
 	public List<Card> findAll();
-
+	public List<Card> findByUserIdIsNull();
+	public List<Card> findByUserId(Integer id);
 }

@@ -17,9 +17,10 @@ public class Card {
 	private int energy;
 	private int hp;
 	private float price;
+	private Integer userId;
 	
 	public Card(String name, String description, String family, String affinity, int energy, int hp,
-			float price) {
+			float price, Integer userId) {
 		super();
 		this.name = name;
 		this.description = description;
@@ -28,12 +29,21 @@ public class Card {
 		this.energy = energy;
 		this.hp = hp;
 		this.price = price;
+		this.userId = userId;
 	}
 	
 	public Card() {
 		
 	}
 
+	public Integer getUserId() {
+		return userId;
+	}
+
+	public void setUserId(Integer userId) {
+		this.userId = userId;
+	}
+	
 	public Integer getId() {
 		return id;
 	}
