@@ -35,9 +35,9 @@ private final TransactionService tService;
 	}
 	
 	@RequestMapping(value="/sell", method={RequestMethod.OPTIONS,RequestMethod.POST})
-	public Card sell(@RequestBody Integer user, Integer card) {
-		Card cardObject = tService.getCard(card);
-		User userObject = tService.getUser(user);
+	public Card sell(@RequestBody buyRequest request) {
+		Card cardObject = tService.getCard(request.getCardId());
+		User userObject = tService.getUser(request.getUserId());
 		return tService.sellCard(userObject, cardObject);
 	}
 }
