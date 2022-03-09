@@ -16,16 +16,16 @@ public class AuthService {
 	}
 	
 	public String register(User u) {
-		if (uRepository.findBySurName(u.getSurName()) == null){
+		if (uRepository.findBySurname(u.getSurname()) == null){
 			uRepository.save(u);
-			return "félicitation " + u.getNom() + ", votre compte a été crée";
+			return "félicitation " + u.getName() + ", votre compte a été crée";
 		}
 		return "Vous avez déja un compte";
 		
 	}
 	
 	public Integer login(User u) {
-		User user = uRepository.findBySurName(u.getSurName());
+		User user = uRepository.findBySurname(u.getSurname());
 		if (user != null && user.getPwd().equals(u.getPwd())) {
 			return user.getId();
 		}

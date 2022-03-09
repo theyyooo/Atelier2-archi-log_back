@@ -10,16 +10,16 @@ public class User {
 	@Id
 	@GeneratedValue
 	private Integer id;
-	private String surName;
+	private String surname;
 	private String pwd;
 	private String name;
 	private float balance;
 	
-	public User(String surName, String pwd, String nom, float solde) {
+	public User(String surname, String pwd, String name, float solde) {
 		super();
-		this.surName = surName;
+		this.surname = surname;
 		this.pwd = pwd;
-		this.name = nom;
+		this.name = name;
 		this.balance = solde;
 	}
 	
@@ -27,12 +27,12 @@ public class User {
 		
 	}
 
-	public String getSurName() {
-		return surName;
+	public String getSurname() {
+		return surname;
 	}
 
-	public void setSurName(String surName) {
-		this.surName = surName;
+	public void setSurname(String surname) {
+		this.surname = surname;
 	}
 
 	public Integer getId() {
@@ -59,11 +59,11 @@ public class User {
 		this.pwd = pwd;
 	}
 
-	public String getNom() {
+	public String getName() {
 		return name;
 	}
 
-	public void setNom(String nom) {
+	public void setName(String nom) {
 		this.name = nom;
 	}
 }

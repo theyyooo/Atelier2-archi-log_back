@@ -9,7 +9,7 @@ public interface UserRepository extends CrudRepository<User, Integer> {
 
 	public User save(User u);
 	
-	public User findBySurName(String surName);
+	public User findBySurname(String surname);
 	
 	public List<User> findAll();
 }

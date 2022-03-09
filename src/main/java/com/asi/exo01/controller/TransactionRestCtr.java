@@ -22,17 +22,17 @@ private final TransactionService tService;
 		this.tService=tService;
 	}
 	
-	@PostMapping("/buy")
-	public Card buy(@RequestBody buyRequest request) {
-		User userObject = tService.getUser(request.getUserId());
-		Card cardObject = tService.getCard(request.getCardId());
-		if (cardObject.getPrice() <= userObject.getSolde()) {
-			return tService.buyCard(userObject, cardObject);
-		}
-		else {
-			throw new HttpClientErrorException(HttpStatus.BAD_REQUEST);
-		}
-	}
+//	@PostMapping("/buy")
+//	public Card buy(@RequestBody buyRequest request) {
+//		User userObject = tService.getUser(request.getUserId());
+//		Card cardObject = tService.getCard(request.getCardId());
+//		if (cardObject.getPrice() <= userObject.getSolde()) {
+//			return tService.buyCard(userObject, cardObject);
+//		}
+//		else {
+//			throw new HttpClientErrorException(HttpStatus.BAD_REQUEST);
+//		}
+//	}
 	
 	@PostMapping("/sell")
 	public Card sell(@RequestBody Integer user, Integer card) {
