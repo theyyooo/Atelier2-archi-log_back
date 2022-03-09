@@ -18,9 +18,11 @@ public class Card {
 	private int hp;
 	private float price;
 	private Integer userId;
+	private Integer attack;
+	private Integer defense;
 	
 	public Card(String name, String description, String family, String affinity, int energy, int hp,
-			float price, Integer userId) {
+			float price, Integer attack, Integer defense, Integer userId) {
 		super();
 		this.name = name;
 		this.description = description;
@@ -29,11 +31,29 @@ public class Card {
 		this.energy = energy;
 		this.hp = hp;
 		this.price = price;
+		this.attack = attack;
+		this.defense = defense;
 		this.userId = userId;
 	}
-	
+
 	public Card() {
 		
+	}
+	
+	public Integer getAttack() {
+		return attack;
+	}
+
+	public void setAttack(Integer attack) {
+		this.attack = attack;
+	}
+
+	public Integer getDefense() {
+		return defense;
+	}
+
+	public void setDefense(Integer defense) {
+		this.defense = defense;
 	}
 
 	public Integer getUserId() {

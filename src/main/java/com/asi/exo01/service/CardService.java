@@ -25,32 +25,32 @@ public class CardService {
 	}
 	
 	public void instanceBdd() {
-		User user1 = new User("theyyooo", "123", "theo", 50);
+		User user1 = new User("theyyooo", "123", "theo", 500);
 		User user2 = new User("xharaly", "123", "charles", 50);
 		
 		uRepository.save(user1);
 		uRepository.save(user2);
 		
-		Card card1 = new Card("card1", "description", "family", "affinity", 100, 100, 50, null);
-		Card card2 = new Card("card2", "description", "family", "affinity", 100, 100, 50, 1);
-		Card card3 = new Card("card3", "description", "family", "affinity", 100, 100, 50, 2);
-		Card card4 = new Card("card4", "description", "family", "affinity", 100, 100, 50, 1);
-		Card card5 = new Card("card5", "description", "family", "affinity", 100, 100, 50, null);
-		Card card6 = new Card("card6", "description", "family", "affinity", 100, 100, 50, null);
-		Card card7 = new Card("card7", "description", "family", "affinity", 100, 100, 50, 1);
-		Card card8 = new Card("card8", "description", "family", "affinity", 100, 100, 50, 2);
-		Card card9 = new Card("card9", "description", "family", "affinity", 100, 100, 50, null);
-		Card card10 = new Card("card10", "description", "family", "affinity", 100, 100, 50, null);
-		Card card11 = new Card("card11", "description", "family", "affinity", 100, 100, 50, 1);
-		Card card12 = new Card("card12", "description", "family", "affinity", 100, 100, 50, null);
-		Card card13 = new Card("card13", "description", "family", "affinity", 100, 100, 50, 2);
-		Card card14 = new Card("card14", "description", "family", "affinity", 100, 100, 50, null);
-		Card card15 = new Card("card15", "description", "family", "affinity", 100, 100, 50, null);
-		Card card16 = new Card("card16", "description", "family", "affinity", 100, 100, 50, 1);
-		Card card17 = new Card("card17", "description", "family", "affinity", 100, 100, 50, null);
-		Card card18 = new Card("card18", "description", "family", "affinity", 100, 100, 50, null);
-		Card card19 = new Card("card19", "description", "family", "affinity", 100, 100, 50, null);
-		Card card20 = new Card("card20", "description", "family", "affinity", 100, 100, 50, 2);
+		Card card1 = new Card("card1", "description", "family", "affinity", 100, 100, 50,50, 50, null);
+		Card card2 = new Card("card2", "description", "family", "affinity", 100, 100, 50,50, 50, 1);
+		Card card3 = new Card("card3", "description", "family", "affinity", 100, 100, 50,50, 50, 2);
+		Card card4 = new Card("card4", "description", "family", "affinity", 100, 100, 50,50, 50, 1);
+		Card card5 = new Card("card5", "description", "family", "affinity", 100, 100, 50,50, 50, null);
+		Card card6 = new Card("card6", "description", "family", "affinity", 100, 100, 50,50, 50, null);
+		Card card7 = new Card("card7", "description", "family", "affinity", 100, 100, 50,50, 50, 1);
+		Card card8 = new Card("card8", "description", "family", "affinity", 100, 100, 50,50, 50, 2);
+		Card card9 = new Card("card9", "description", "family", "affinity", 100, 100, 50,50, 50, null);
+		Card card10 = new Card("card10", "description", "family", "affinity", 100, 100, 50,50, 50, null);
+		Card card11 = new Card("card11", "description", "family", "affinity", 100, 100, 50,50, 50, 1);
+		Card card12 = new Card("card12", "description", "family", "affinity", 100, 100, 50,50, 50, null);
+		Card card13 = new Card("card13", "description", "family", "affinity", 100, 100, 50,50, 50, 2);
+		Card card14 = new Card("card14", "description", "family", "affinity", 100, 100, 50,50, 50, null);
+		Card card15 = new Card("card15", "description", "family", "affinity", 100, 100, 50,50, 50, null);
+		Card card16 = new Card("card16", "description", "family", "affinity", 100, 100, 50,50, 50, 1);
+		Card card17 = new Card("card17", "description", "family", "affinity", 100, 100, 50,50, 50, null);
+		Card card18 = new Card("card18", "description", "family", "affinity", 100, 100, 50,50, 50, null);
+		Card card19 = new Card("card19", "description", "family", "affinity", 100, 100, 50,50, 50, null);
+		Card card20 = new Card("card20", "description", "family", "affinity", 100, 100, 50,50, 50, 2);
 		
 		cRepository.save(card1);
 		cRepository.save(card2);
