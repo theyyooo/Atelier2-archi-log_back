@@ -27,7 +27,6 @@ public class TransactionService {
 	
 	public Card getCard(Integer intCard) {
 		Optional<Card> card = cRepository.findById(intCard);
-		System.out.println("price: " + card.get().getPrice());
 		return card.get();
 	}
 	
