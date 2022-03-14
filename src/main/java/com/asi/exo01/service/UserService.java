@@ -1,11 +1,9 @@
 package com.asi.exo01.service;
 
 import java.util.List;
-import java.util.Optional;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
+import com.asi.exo01.exception.UserNotFoundException;
 import com.asi.exo01.model.User;
 import com.asi.exo01.repository.UserRepository;
 
@@ -22,7 +20,8 @@ public class UserService {
 		return uRepository.findAll();
 	}
 	
-	public Optional<User> getUser(Integer id) {
-		return uRepository.findById(id);
+	public User getUser(Integer id) {
+			return uRepository.findById(id)
+					.orElseThrow(() -> new UserNotFoundException(id));
 	}
 }

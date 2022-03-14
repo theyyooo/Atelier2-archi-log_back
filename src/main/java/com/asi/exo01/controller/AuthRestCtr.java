@@ -1,3 +1,4 @@
+
 package com.asi.exo01.controller;
 
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -6,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+import com.asi.exo01.exception.MissParamException;
 import com.asi.exo01.model.User;
 import com.asi.exo01.service.AuthService;
 
@@ -20,19 +22,20 @@ public class AuthRestCtr {
 	}
 	
 	@RequestMapping(value="/register", method={RequestMethod.OPTIONS,RequestMethod.POST})
-	public String register(@RequestBody User u) {
+	public User register(@RequestBody User u) {
 		
 		if (u.getName() != null && u.getPwd() != null && u.getSurname() != null) {
+			u.setSolde(100);
 			return authService.register(u);
 		}
-		return "Merci de compléter le formulaire entièrement.";
+		throw new MissParamException();
 	}
 	
 	@PostMapping("/login")
-	public Integer login(@RequestBody User u) {
+	public User login(@RequestBody User u) {
 		if (u.getSurname() != null && u.getPwd() != null) {
 			return authService.login(u);
 		}
-		return -1;
+		throw new MissParamException();
 	}
 }

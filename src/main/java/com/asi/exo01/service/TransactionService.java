@@ -1,9 +1,9 @@
 package com.asi.exo01.service;
 
-import java.util.Optional;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import com.asi.exo01.exception.CardNotFoundException;
+import com.asi.exo01.exception.UserNotFoundException;
 import com.asi.exo01.model.Card;
 import com.asi.exo01.model.User;
 import com.asi.exo01.repository.CardRepository;
@@ -25,13 +25,13 @@ public class TransactionService {
 	}
 	
 	public Card getCard(Integer intCard) {
-		Optional<Card> card = cRepository.findById(intCard);
-		return card.get();
+		return cRepository.findById(intCard)
+				.orElseThrow(() -> new CardNotFoundException());
 	}
 	
 	public User getUser(Integer intUser) {
-		Optional<User> user = uRepository.findById(intUser);
-		return user.get();
+		return uRepository.findById(intUser)
+				.orElseThrow(() -> new UserNotFoundException(intUser));
 	}
 	
 	public Card buyCard(User user, Card card) {
