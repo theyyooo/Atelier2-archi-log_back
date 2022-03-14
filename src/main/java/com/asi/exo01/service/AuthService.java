@@ -26,10 +26,10 @@ public class AuthService {
 		
 	}
 	
-	public User login(User u) {
+	public Integer login(User u) {
 		User user = uRepository.findBySurname(u.getSurname());
 		if (user != null && user.getPwd().equals(u.getPwd())) {
-			return user;
+			return user.getId();
 		}
 		throw new UserConnectionException();
 		
